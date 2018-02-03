@@ -22,5 +22,12 @@ describe('tester-names', function() {
       var randomItem = testerNames.random();
       expect(testerNames.all).to.include(randomItem)
     });
+    it('should return an array of random item if passed number', function() {
+      var randomItem = testerNames.random(2);
+      expect(randomItem).to.have.length(2);
+      randomItem.forEach(function(item) {
+        expect(testerNames.all).to.include(item);
+      });
+    });
   });
 });
