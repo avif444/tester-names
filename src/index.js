@@ -6,7 +6,8 @@ module.exports = {
   all: testerNames,
   random: random,
   test: 'tester',
-  addSome: 'addSome'
+  addSome: 'addSome',
+  addAnotherOne: 'addAnotherOne'
 }
 
 function random(number) {
