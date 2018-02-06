@@ -5,7 +5,8 @@ var getRandomItems = uniqueRandomArray(testerNames)
 module.exports = {
   all: testerNames,
   random: random,
-  test: 'tester'
+  test: 'tester',
+  addSome: 'addSome'
 }
 
 function random(number) {
