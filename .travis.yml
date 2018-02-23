@@ -2,6 +2,9 @@ language: node_js
 cache:
   directories:
     - ~/.npm
+branches: 
+  only:
+    - master
 notifications:
   email: false
 node_js:
@@ -11,8 +14,9 @@ node_js:
   - '4'
 script:
   # Run tests
-  - npm run test:single
+  - npm run cover
   - npm run check-coverage
+  - npm run build
 after_success:
   - npm run report-coverage
   - npm run travis-deploy-once "npm run semantic-release"

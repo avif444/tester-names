@@ -1,12 +1,11 @@
-var uniqueRandomArray = require('unique-random-array');
-var testerNames = require('./tester-names.json');
+import uniqueRandomArray from 'unique-random-array'
+import testerNames from './tester-names.json'
+
 var getRandomItems = uniqueRandomArray(testerNames)
 
 module.exports = {
   all: testerNames,
   random: random,
-  test: 'tester',
-  addSome: 'addSome'
 }
 
 function random(number) {
